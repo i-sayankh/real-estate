@@ -104,7 +104,7 @@ Contributions are welcome! Please follow these steps:
 ### Home Page
 ![Home Page](./screenshots/home-screenshot.png)
 
-### Home Page
+### About Page
 ![About Page](./screenshots/about-screenshot.png)
 
 ### Projects Section
