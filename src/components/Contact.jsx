@@ -1,3 +1,4 @@
+import { motion } from "motion/react" // Importing motion for animations
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 
@@ -46,7 +47,13 @@ const Contact = () => {
     };
 
     return (
-        <div className="text-center p-6 py-20 lg:px-32 w-full overflow-hidden" id="Contact">
+        <motion.div
+            initial={{ opacity: 0, x: -200 }} // Initial animation state: hidden with vertical offset
+            transition={{ duration: 1 }} // Transition duration for smooth animation
+            whileInView={{ opacity: 1, x: 0 }} // Animation when the component is in view
+            viewport={{ once: true }} // Ensures the animation only runs once when in view
+            className="text-center p-6 py-20 lg:px-32 w-full overflow-hidden" id="Contact"
+        >
             {/* Section Header */}
             <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-center">
                 Contact <span className="underline underline-offset-4 decoration-1 font-light">With Us</span>
@@ -94,7 +101,7 @@ const Contact = () => {
                     {result ? result : 'Send Message'}
                 </button>
             </form>
-        </div>
+        </motion.div>
     );
 };
 

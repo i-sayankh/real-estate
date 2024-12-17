@@ -1,10 +1,15 @@
-// Importing the assets for image usage
-import { assets } from "../assets/assets"
+import { motion } from "motion/react" // Importing motion for animations
+import { assets } from "../assets/assets" // Importing the assets for image usage
 
 const About = () => {
     return (
         // Container for the About section with responsive padding and alignment
-        <div
+        // Animated Content using motion.div
+        <motion.div
+            initial={{ opacity: 0, x: 100 }} // Initial animation state: hidden with vertical offset
+            transition={{ duration: 1 }} // Transition duration for smooth animation
+            whileInView={{ opacity: 1, x: 0 }} // Animation when the component is in view
+            viewport={{ once: true }} // Ensures the animation only runs once when in view
             className="flex flex-col items-center justify-center container mx-auto p-14 md:px-20 lg:px-32 w-full overflow-hidden"
             id="About" // Anchor ID for navigation
         >
@@ -67,7 +72,7 @@ const About = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
