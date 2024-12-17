@@ -10,8 +10,7 @@ const About = () => {
         >
             {/* Section Heading */}
             <h1 className="text-2xl sm:text-4xl font-bold mb-2">
-                About {' '}
-                <span className="underline underline-offset-4 decoration-1 font-light">Our Brand</span>
+                About <span className="underline underline-offset-4 decoration-1 font-light">Our Brand</span>
             </h1>
 
             {/* Subheading Text */}
